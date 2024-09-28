@@ -1,0 +1,48 @@
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the code from the repository
+    - uses: actions/checkout@v4
+
+    # Step 2: Set up Python 3.10
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+
+    # Step 3: Set up Node.js (for the frontend build)
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16' # Specify the Node.js version as needed
+
+    # Step 4: Install dependencies via Makefile
+    - name: Install dependencies via Makefile
+      run: |
+        make install  # Use the install command from the Makefile to install backend and frontend dependencies
+
+    # Step 8: Run Flask Application (optional for integration test)
+    - name: Run Flask Application
+      env:
+        FLASK_APP: backend/app.py
+      run: |
+        make run
+
+    # Optional: Clean up after tests and builds (remove virtual environment, node_modules, etc.)
+    - name: Clean up
+      run: |
+        make clean
