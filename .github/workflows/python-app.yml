@@ -40,9 +40,7 @@ jobs:
       env:
         FLASK_APP: backend/app.py
       run: |
-        make run &  # Run the app in the background
-        sleep 5  # Give it time to start
-        curl http://127.0.0.1:3000/  # Check if the app is running on port 3000
+        make run
 
     # Optional: Clean up after tests and builds (remove virtual environment, node_modules, etc.)
     - name: Clean up
