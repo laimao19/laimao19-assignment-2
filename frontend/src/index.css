@@ -1,0 +1,171 @@
+/* Keep your original settings */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;  /* Black background */
+  color: #fff;  /* White text */
+}
+
+/* For scrollable content */
+html, body {
+  height: 100%; /* Allow full height scroll */
+  overflow: auto; /* Enable scrolling */
+}
+
+/* For centering content vertically and horizontally */
+#root, body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Ensure the plot takes up the full container */
+#d3-container {
+  width: 1200px;
+  height: 800px;
+  margin: 0;  /* Remove the extra margins */
+  padding: 0; /* Remove padding to ensure plot reaches the edges */
+  background-color: #fff; /* Keep the plot white */
+  border: none; /* Remove the border */
+  box-shadow: none;
+}
+
+
+/* Base button styles */
+button {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Solid button style */
+button.solid {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+button.solid:hover {
+  background-color: #333;
+}
+
+/* Outline button style */
+button.outline {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+button.outline:hover {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Rounded solid button style */
+button.rounded {
+  background-color: #000;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 30px;
+}
+
+button.rounded:hover {
+  background-color: #333;
+}
+
+/* Rounded outline button style */
+button.rounded-outline {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  padding: 10px 30px;
+}
+
+button.rounded-outline:hover {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Button with icon */
+button.icon {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 10px 30px;
+  position: relative;
+}
+
+button.icon::after {
+  content: '➔';
+  margin-left: 10px;
+  transition: margin-left 0.3s ease;
+}
+
+button.icon:hover::after {
+  margin-left: 15px;
+}
+
+/* Adjust button container for layout */
+/* Container for buttons to display them side by side */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust the spacing between buttons */
+}
+
+
+
+button:hover {
+  background-color: #555;
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background-color: #444; /* Disabled state */
+  cursor: not-allowed;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Align form elements properly */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ensure labels and inputs are styled nicely */
+label {
+  margin-right: 10px;
+}
+
+select, input {
+  padding: 5px;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
