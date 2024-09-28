@@ -1,6 +1,6 @@
 # KMeans Clustering Visualization with Flask Backend
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/yourusername/yourrepo/python-app.yml?branch=main)
+[![Python application](https://github.com/laimao19/laimao19-assignment-2/actions/workflows/python-app.yml/badge.svg)](https://github.com/laimao19/laimao19-assignment-2/actions/workflows/python-app.yml)
 
 Welcome to my **KMeans Clustering Visualization**! This webpage allows you to visualize KMeans clustering algorithms with dynamic centroids and data points on the frontend, while the backend runs a Flask server to handle the clustering logic. The visualization is built with React and D3.js, and the backend is powered by Python and Flask.
 
