@@ -52,6 +52,7 @@ const App = () => {
   // Handle changes in k by resetting the state
   useEffect(() => {
     reset(); // Reset all when k changes
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [k]);
 
   // Define the width and height for the D3 plot
