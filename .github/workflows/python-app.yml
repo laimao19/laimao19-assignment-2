@@ -34,15 +34,3 @@ jobs:
     - name: Install dependencies via Makefile
       run: |
         make install  # Use the install command from the Makefile to install backend and frontend dependencies
-
-    # Step 8: Run Flask Application (optional for integration test)
-    - name: Run Flask Application
-      env:
-        FLASK_APP: backend/app.py
-      run: |
-        make run
-
-    # Optional: Clean up after tests and builds (remove virtual environment, node_modules, etc.)
-    - name: Clean up
-      run: |
-        make clean
