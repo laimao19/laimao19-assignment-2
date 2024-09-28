@@ -41,7 +41,7 @@ jobs:
         FLASK_APP: backend/app.py
       run: |
         make run &  # Start the Flask application in the background
-        sleep 5  # Wait for the server to start
+        sleep 20  # Wait for the server to start
         pkill -f "flask run"  # Stop the Flask server once tests are done
 
     # Step 8: Clean up (optional)
