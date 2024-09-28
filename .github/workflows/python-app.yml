@@ -34,3 +34,19 @@ jobs:
     - name: Install dependencies via Makefile
       run: |
         make install  # Use the install command from the Makefile to install backend and frontend dependencies
+
+    # Step 7: Run Flask Application
+    - name: Run Flask Application
+      env:
+        FLASK_APP: backend/app.py
+      run: |
+        make run &  # Start the Flask application in the background
+        sleep 5  # Wait for the server to start
+        curl --fail http://127.0.0.1:3000/  # Check if the app is running on port 3000
+        echo "Server is up and running"
+        pkill -f "flask run"  # Stop the Flask server once tests are done
+
+    # Step 8: Clean up (optional)
+    - name: Clean up
+      run: |
+        make clean  # Clean up the environment if needed
